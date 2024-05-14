@@ -4,8 +4,12 @@ const HomePage=({workouts})=>{
     return (
 
         <>
-        <h1>Home</h1>
-        <h2>BODY DESIGNERS</h2>
+        <h1>BODY DESIGNERS</h1>
+        <h2>Workout:</h2>
+        
+
+
+
         <p>These exercise descriptions give you an idea of
          how to perform each movement correctly. 
         Remember, proper form is key to avoiding injuries 
