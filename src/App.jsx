@@ -6,6 +6,7 @@ import FormPage from './pages/FormPage';
 import HomePage from './pages/HomePage';
 import AboutMePage from './pages/AboutMePage';
 import WorkoutPage from './pages/WorkoutPage';
+import Navbar from './Component/Navbar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,6 +29,7 @@ useEffect(()=>{
     <>
      
       <div>
+        <Navbar/>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path='/AboutMePage' element={<AboutMePage/>}/>
@@ -38,7 +40,7 @@ useEffect(()=>{
         
       
       
-      \<h2></h2>
+      <h2></h2>
       
       </div>
       

@@ -6,7 +6,7 @@ const WorkoutPage=({workouts})=>{
      {workouts.map((workout)=>{
         return(
             <div key={workout.id}className="card">
-                
+
                 <h1>{workout.Body_Part}</h1>
                 <img src={workout.image} alt={workout.name}/>
                 <h2>{workout.name}</h2>

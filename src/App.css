@@ -5,6 +5,26 @@
         text-align: center;
       }
 
+body{
+    padding: 0;
+    margin: 0;
+    background:#3F51B5;
+    background-image: linear-gradient(#7E57C2 50%, #3F51B5);
+    text-align: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:100vh;
+  
+} 
+.navbar {
+  padding-left: 2vw;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #7fbfb0;
+height: 10vh;
+}    
+
 .creator-image{
   width: 30vw;
   height: 30vh;
@@ -19,14 +39,34 @@
   position: absolute;
   top: 10vh;
   left: 30vw;
-  background-image: url("../assets/images/nonna-cooking.jpg");
   background-size: cover;
 }
 .formulary{
 display: flex;
 flex-direction: column;
+background-color: rgb(86, 172, 209);
 }
 .submit {
   margin-top: 3vh;
   margin-bottom: 3vh
+}
+.card {
+  background-color: rgb(177, 199, 219);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  border-radius: 3em;
+  margin-bottom: 3em;
+  margin-left: 3em;
+  margin-right: 3em;
+  
+
+  img {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }
