@@ -13,7 +13,9 @@ const HomePage=({workouts})=>{
         </p>
         
     
-        <Link to="/AboutMePage"><button className="BtnAbout" >go to About Me Page</button>
+        <Link to="/AboutMePage"><button className="Btn" >go to About Me Page</button>
+        </Link>
+        <Link to="/FormPage"><button className="Btn" >go to create</button>
         </Link>
         </>
     );

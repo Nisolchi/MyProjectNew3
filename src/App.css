@@ -4,3 +4,29 @@
         padding: 2rem;
         text-align: center;
       }
+
+.creator-image{
+  width: 30vw;
+  height: 30vh;
+  padding: 3px;
+  border-radius: 30%;
+  cursor: pointer;
+
+}
+.form-content {
+  width: 70vw;
+  height: 70vh;
+  position: absolute;
+  top: 10vh;
+  left: 30vw;
+  background-image: url("../assets/images/nonna-cooking.jpg");
+  background-size: cover;
+}
+.formulary{
+display: flex;
+flex-direction: column;
+}
+.submit {
+  margin-top: 3vh;
+  margin-bottom: 3vh
+}

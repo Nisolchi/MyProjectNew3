@@ -1,5 +1,6 @@
 import{useState} from "react";
 import supabase from "../Supabase/config";
+import { Link } from "react-router-dom";
 
 const initialWorkout={
     Body_Part:"",
@@ -31,14 +32,21 @@ const FormPage=()=>{
             setFormData(initialWorkout);
         }
     };
+    
     return(
-        <from onSubmit={handleSubmit}>
-            <label htmlFor="Body_Part"> Body Part</label>
-            <input on onChange={handleInput}
+     <div className="Form-content">
+        <from className="formulary" onSubmit={handleSubmit}>
+            
+            
+            <select on onChange={handleInput}
             value={formData.Body_Part}
             type="text"
-            name="Body_part"
-            />
+            name="Body_part">
+                <option value="Legs and Glutes">Legs and Glutes</option>
+                <option value="Chest and Triceps">Chest and Triceps</option>
+                <option value="Back and Biceps">Back and Biceps</option>
+                <option value="Shoulders and ABS">Shoulders and ABS</option>
+            </select>
             <label htmlFor="image">Picture(add url)</label>
             <input
             onChange={handleInput}
@@ -58,8 +66,11 @@ const FormPage=()=>{
             type="text"
             name="instruction"
             />
-            <button type="submit">create a Workout</button>
+            <button className="submit" type="submit">create Workout</button>
+        <Link to="/"><button className="Btn" >Back Home</button></Link>
+            
         </from>
+     </div>
 
     );
 
