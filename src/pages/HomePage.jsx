@@ -16,13 +16,13 @@ const HomePage=({workouts})=>{
         and getting the most out of your workouts.
         </p>
         
-    
-        <Link to="/AboutMePage"><button className="Btn" >go to About Me Page</button>
+        <Link to="/AboutMePage"><button className="Btn" >About Me</button>
         </Link>
-        <Link to="/FormPage"><button className="Btn" >go to create</button>
+        <Link to="/FormPage"><button className="Btn" >Create</button>
         </Link>
         <Link to="/WorkoutPage"><button className="Btn" >Your Workout</button>
         </Link>
+       
         </>
     );
 

@@ -1,20 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 function Navbar() {
     return (
-<>
+<div className="NavContainer">
 
     
-    <h2>BodyDesigners<span>Responsive</span></h2>
+    <h2>BodyDesigners</h2>
     <div>
-        <a href="/">Home</a>
-        <a href="/">Workout</a>
-        <a href="/">Create workout</a>
-        <a href="/">About Me</a>
+        <a className="HomeIcon" href="/">Home</a>
+       
     </div>
+   
 
-</>
+</div>
  
 )
 }

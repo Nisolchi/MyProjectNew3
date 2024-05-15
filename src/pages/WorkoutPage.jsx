@@ -1,14 +1,35 @@
 import { Link } from "react-router-dom";
+import supabase from "../Supabase/config";
+import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 function WorkoutPage({workouts, setWorkouts}) {
 
-    /*const deleteWorkout= workoutId=>{
+console.log("rrrr",workouts)
+    const {workoutId}= useParams();
+
+   /*  =>{
         const filteredWorkout= workouts.filter(workout=> workout.id !== workoutId);
         console.log(workoutId);
         return setWorkouts(filteredWorkout)
 
-    }; */
+    };  */
+    const deleteWorkout= async(id)=>{
+        
+            const {error}= await (supabase)
+            .from('workouts')
+            .delete()
+            .eq('id', id)
+
+            if(error){
+                console.log(error)
+            }else{setWorkouts(prevWorkouts=> prevWorkouts.filter(workout=> workout.id !== id))}
+            
+        };
+        
     
+
+    }
     return(
      <div className="bigCard">
 
@@ -23,7 +44,7 @@ function WorkoutPage({workouts, setWorkouts}) {
                 <h2>{workout.name}</h2>
                 <p>Instruction:{workout.instruction}</p>
 
-              { /* <button className="btnDelete" onClick={() => deleteWorkout(workout.id)}>Delete</button>*/}
+              <button className="btnDelete" onClick={() => deleteWorkout(workout.id)}>Delete</button>
 
                 <Link to="/"><button className="Btn" >Back Home</button></Link>
 
@@ -32,6 +53,6 @@ function WorkoutPage({workouts, setWorkouts}) {
      })}
      </div>
     );
-};
+
 
 export default WorkoutPage;

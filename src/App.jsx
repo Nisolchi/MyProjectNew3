@@ -10,7 +10,7 @@ import Navbar from './Component/Navbar';
 
 function App() {
   const [count, setCount] = useState(0)
- const [workouts, setWorkouts] = useState(""); /* New state variable for the workouts */
+ const [workouts, setWorkouts] = useState([]); /* New state variable for the workouts */
 
  const getWorkouts = async()=>{
   const{data, error}= await supabase.from("workouts").select();
@@ -34,7 +34,9 @@ useEffect(()=>{
           <Route path="/" element={<HomePage/>}/>
           <Route path='/AboutMePage' element={<AboutMePage/>}/>
           <Route path='/FormPage' element={<FormPage/>}/>
-          <Route path='/WorkoutPage' element={<WorkoutPage workouts={workouts}/>}/>
+          <Route path='/WorkoutPage'  element={<WorkoutPage workouts={workouts}/>}/>
+          <Route path='/WorkoutPage/:id'  element={<WorkoutPage workouts={workouts}/>}/>
+          
           {/* Add a new route for workouts page */}
         </Routes>
         
