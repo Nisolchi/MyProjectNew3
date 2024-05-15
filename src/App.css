@@ -84,6 +84,10 @@ background-color: rgb(86, 172, 209);
  align-items: center;
  justify-content: space-between;
 
+.NavContainer:hover{
+  
+}
+
  
  
  h2{

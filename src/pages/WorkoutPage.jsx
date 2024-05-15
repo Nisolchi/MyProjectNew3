@@ -1,12 +1,26 @@
 import { Link } from "react-router-dom";
 import supabase from "../Supabase/config";
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function WorkoutPage({workouts, setWorkouts}) {
-
-console.log("rrrr",workouts)
+function WorkoutPage({workouts}) {
+    const[ workoutCard, setWorout]= useState(null)
     const {workoutId}= useParams();
+    const[isSupabase, setIsSupabase]= useState(false)
+
+    const deleteWorkout =async()=>{
+        const {error} = await (supabase)
+        .from("workouts")
+        .delete()
+        .eq("id", workoutCard.id)
+        if(error){
+            console.log("na'guara",error)
+        } else {
+            setWorout()
+        }
+    }
+
+    /* const {workoutId}= useParams();
 
    /*  =>{
         const filteredWorkout= workouts.filter(workout=> workout.id !== workoutId);
@@ -14,12 +28,12 @@ console.log("rrrr",workouts)
         return setWorkouts(filteredWorkout)
 
     };  */
-    const deleteWorkout= async(id)=>{
+   /* const deleteWorkout= async()=>{
         
             const {error}= await (supabase)
             .from('workouts')
             .delete()
-            .eq('id', id)
+            .eq('id', workouts.id)
 
             if(error){
                 console.log(error)
@@ -29,7 +43,7 @@ console.log("rrrr",workouts)
         
     
 
-    }
+    } */
     return(
      <div className="bigCard">
 
@@ -46,7 +60,6 @@ console.log("rrrr",workouts)
 
               <button className="btnDelete" onClick={() => deleteWorkout(workout.id)}>Delete</button>
 
-                <Link to="/"><button className="Btn" >Back Home</button></Link>
 
             </div>
         );
@@ -54,5 +67,5 @@ console.log("rrrr",workouts)
      </div>
     );
 
-
+}
 export default WorkoutPage;
