@@ -7,7 +7,8 @@ import HomePage from './pages/HomePage';
 import AboutMePage from './pages/AboutMePage';
 import WorkoutPage from './pages/WorkoutPage';
 import Navbar from './Component/Navbar';
-import Footer from './Component/FooterNch';
+import FooterPage from './Component/FooterPage';
+import UpdatePage from './Component/UpdatePage';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,12 +36,21 @@ useEffect(()=>{
           <Route path="/" element={<HomePage/>}/>
           <Route path='/AboutMePage' element={<AboutMePage/>}/>
           <Route path='/FormPage' element={<FormPage/>}/>
-          <Route path='/WorkoutPage'  element={<WorkoutPage workouts={workouts}/>}/>
-          <Route path='/WorkoutPage/:id'  element={<WorkoutPage workouts={workouts}/>}/>
+          <Route path='/WorkoutPage'  element={<WorkoutPage getWorkouts={getWorkouts} workouts={workouts}/>}/>
+          <Route path='/workout/:workoutId' element={<UpdatePage/>}/>
+      
           
-          {/* Add a new route for workouts page */}
+          {/* 
+          Add a page to update the workout. It's a new component.Almost the same as FormPage.
+          the path has to include the id of the workout: /workout/:workoutId
+
+          2. Create the component with the form
+          3. Te component has to get the info about the workout that matches the ID you have in the URL
+          useParams is going to help you get the workoutId value in the URL
+          
+          */}
         </Routes>
-        <Footer/>
+        <FooterPage/>
         
       
       

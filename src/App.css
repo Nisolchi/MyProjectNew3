@@ -77,15 +77,16 @@ background-color: rgb(86, 172, 209);
  
  .NavContainer{
 
-
- padding: 2rem;
+  width: 100%;
+  height: 50px;
  background-color: #b491ad;
  display: flex;
  align-items: center;
  justify-content: space-between;
+ background-size:30vw 70vh;
 
-.NavContainer:hover{
-  
+
+
 }
 
  
@@ -101,7 +102,7 @@ background-color: rgb(86, 172, 209);
     color: whithe;
     margin-right:1rem;
   }
-}
+
 .HomeIcon{
   
   position: relative;
@@ -115,3 +116,32 @@ background-color: rgb(86, 172, 209);
 }
 
 /* BurgerButton*/
+
+.footer {
+  font-size: 2.5vw;
+    width: 100vw;
+    height: 20vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: 30vw;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+a{
+  margin-top: 4vh;
+  width: 80vw;
+  height: 10vh;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+ 
+  
+
+}
+}

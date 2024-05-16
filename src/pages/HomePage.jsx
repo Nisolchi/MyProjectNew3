@@ -22,6 +22,8 @@ const HomePage=({workouts})=>{
         </Link>
         <Link to="/WorkoutPage"><button className="Btn" >Your Workout</button>
         </Link>
+        <Link to="/UpdatePage"><button className="Btn" >Update Workout</button>
+        </Link>
        
         </>
     );
