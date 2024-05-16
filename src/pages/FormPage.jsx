@@ -69,7 +69,7 @@ const FormPage=()=>{
             id="instruction"
             />
             <button className="submit" type="submit">create Workout</button>
-        <Link to="/"><button className="Btn" >Back Home</button></Link>
+
             
         </form>
      </div>

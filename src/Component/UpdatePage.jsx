@@ -12,8 +12,10 @@ const initialWorkout={
 
 };
 
-const UpdatePage=()=>{
+const UpdatePage=({getWorkouts})=>{
     const [updateData, setUpdateData]= useState(initialWorkout);
+    const navigate = useNavigate();
+
     const handleInput=(event)=>{
         const field= event.target.name;
         const value= event.target.value;
@@ -26,7 +28,6 @@ const UpdatePage=()=>{
     }
     const {workoutId}= useParams(); 
 
-    const navigate = useNavigate();
 
 
     
@@ -41,8 +42,9 @@ const UpdatePage=()=>{
             return;
         }else{
             // everything went OK
-             navigate("/WorkoutPage")
+            getWorkouts();
             console.log("workout Updated");
+            navigate("/WorkoutPage")
             setUpdateData(initialWorkout);
         }
     };
@@ -50,8 +52,8 @@ const UpdatePage=()=>{
 
     return(
         <>
-        <div className="Update-content">
-        <form className="updateForm" onSubmit={handleSubmit}>
+        <div className="content">
+        <form className="Form" onSubmit={handleSubmit}>
             
             <select onChange={handleInput}
             value={updateData.Body_Part}
@@ -85,7 +87,7 @@ const UpdatePage=()=>{
             id="instruction"
             />
             <button className="btn" type="submit">Update Workout</button>
-            <button className="btn" onClick={()=> navigate("/WorkoutPage")}></button>
+            {/* <button className="btn" onClick={()=> navigate("/WorkoutPage")}>your changes</button> */}
        
             
         </form>

@@ -30,14 +30,14 @@ useEffect(()=>{
   return (
     <>
      
-      <div>
+      
         <Navbar/>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path='/AboutMePage' element={<AboutMePage/>}/>
           <Route path='/FormPage' element={<FormPage/>}/>
           <Route path='/WorkoutPage'  element={<WorkoutPage getWorkouts={getWorkouts} workouts={workouts}/>}/>
-          <Route path='/workout/:workoutId' element={<UpdatePage/>}/>
+          <Route path='/workout/:workoutId' element={<UpdatePage getWorkouts={getWorkouts}/>}/>
       
           
           {/* 
@@ -55,7 +55,7 @@ useEffect(()=>{
       
       
       
-      </div>
+    
       
     </>
   )

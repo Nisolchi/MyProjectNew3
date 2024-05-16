@@ -27,6 +27,12 @@ function WorkoutPage({workouts, getWorkouts}) {
      <div className="bigCard">
 
      <h1>Our Workouts</h1>
+    
+     <h3 className="descriptionTxt">These exercise descriptions give you an idea of
+         how to perform each movement correctly. 
+        Remember, proper form is key to avoiding injuries 
+        and getting the most out of your workouts.
+        </h3>
 
      {workouts.map((workout)=> {
         return(

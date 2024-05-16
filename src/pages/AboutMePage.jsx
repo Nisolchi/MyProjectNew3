@@ -8,7 +8,7 @@ function AboutMePage(){
         <h1>AboutMe</h1>
         <div>
         <img className="creator-image" src="src\assets\image\NisolPic.JPG" alt="MyPic"/>
-            <p>
+            <p className="descriptionTxt">
                 Hi, I'm Nisol Medina, a passionate web development student. 
                 I'm currently working on this project to showcase the skills 
                 I've recently acquired, particularly in React and its exciting

@@ -10,11 +10,11 @@ const Footer= () =>{
     return (
          <footer className="footer"> 
             <div>
-                <section className="Footer-img">
-            <a href="https:/instagram.com"><img src={InstaIcon} alt="" /></a>
-            <a href="https:/twitter.com"><img src={twitterIcon} alt="" /></a>
-            <a href="https:/github.com"><img src={githubIcon} alt="" /></a>
-            </section>
+            
+            <a className="icon" href="https:/instagram.com"><img src={InstaIcon} alt="" /></a>
+            <a className="icon" href="https:/twitter.com"><img src={twitterIcon} alt="" /></a>
+            <a  className="icon" href="https:/github.com"><img src={githubIcon} alt="" /></a>
+            
                 Developed by NisoL ©️ {newDate.getFullYear()}
             </div>
 

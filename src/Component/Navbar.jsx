@@ -8,7 +8,7 @@ function Navbar() {
 <div className="NavContainer">
 
     
-    <h2>BodyDesigners</h2>
+    <h2>Crafting sleek bodies</h2>
     <div>
         <a className="HomeIcon" href="/">Home</a>
        

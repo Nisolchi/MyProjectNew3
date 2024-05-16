@@ -1,37 +1,70 @@
-#root {
-     max-width: 1280px;
-        margin: 0 auto;
-        padding: 2rem;
-        text-align: center;
-      }
+#root{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: 0;
+padding: 0;
 
-body{
-    padding: 0;
-    margin: 0;
-    background:#3F51B5;
-    background-image: linear-gradient(#7E57C2 50%, #3F51B5);
-    text-align: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    height:100vh;
+
+}
+
+body {
   
-} 
-.navbar {
-  padding-left: 2vw;
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #7fbfb0;
-height: 10vh;
-}    
+  padding: 0;
+  margin: 0;
+  background: #3f51b5;
+  color: #ccc;
+  
+  background-image: Url("../src/assets/image/Fitness_workout.jpg");
+  text-align: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 
-.creator-image{
-  width: 30vw;
-  height: 30vh;
+}
+.Navbar {
+  padding-left: 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7fbfb0;
+  width: 100vw;
+  height: 10vh;
+
+  .title {
+    width: 150px;
+    color: black; 
+  }
+  
+  .logo {
+    width: 50px; 
+  }
+
+
+}
+
+.creator-image {
+  width: 25vw;
+  height: 60vh;
   padding: 3px;
   border-radius: 30%;
   cursor: pointer;
-
+  border-bottom: 20px;
+}
+#txt.p{
+  width: 3vw;
+  text-align: center;
+  justify-content: center;
+}
+.descriptionTxt{
+  width: 40vw;
+  background-color: #122130;
+  border-radius: 1rem;
+  color: rgb(236, 232, 239);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .form-content {
   width: 70vw;
@@ -41,107 +74,214 @@ height: 10vh;
   left: 30vw;
   background-size: cover;
 }
-.formulary{
-display: flex;
-flex-direction: column;
-background-color: rgb(86, 172, 209);
-}
-.submit {
-  margin-top: 3vh;
-  margin-bottom: 3vh
-}
-.card {
-  background-color: rgb(177, 199, 219);
-  color: black;
+.formulary {
+
+  width: 30vw;
+  height: 70vh;
+margin-top: 8vh;
+margin-bottom: 8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em;
-  border-radius: 3em;
-  margin-bottom: 3em;
-  margin-left: 3em;
-  margin-right: 3em;
+  justify-content: center;
+  background-color: rgb(16, 67, 92);
+  border-radius: 4em;
+  margin-left: 2px;
+}
+.submit {
   
+
+  margin-top: 4vh;
+  margin-bottom: 5vh;
+  background-color: #61d4ba;
+}
+
+.bigCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+.card {
+width: 15vw;
+height: 80vh;
+  background-color: rgb(72, 104, 134);
+  color: rgb(227, 216, 216);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  border-radius: 2em;
+  margin-bottom: 2em;
+  margin-left: 40vw;
+  margin-right: 32em;
 
   img {
     width: 10em;
     height: 10em;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 35%;
+
+    }
   }
-}
+  .btn{
+    border-color: 1px solid red;
+    
+
+  }
+
 
 /*Navbar*/
 
+.NavContainer {
 
- 
- .NavContainer{
-
+  
   width: 100%;
   height: 50px;
- background-color: #b491ad;
- display: flex;
- align-items: center;
- justify-content: space-between;
- background-size:30vw 70vh;
-
-
-
+  background-color: #6c4464;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-size: 30vw 70vh;
 }
 
- 
- 
- h2{
-   font-weight: 400px;
-   span{
-     font-weight: bold;
-    }
+h2 {
+  font-weight: 400px;
+  span {
+    font-weight: bold;
   }
-  
-  a{
-    color: whithe;
-    margin-right:1rem;
-  }
+}
 
-.HomeIcon{
+a {
+  color: whithe;
   
+}
+.home-img{
+  width: 30vw;
+  height: 60vh;
+  border-radius: 50%;
+  margin: 10vh 0;
+  
+
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+img {
+  animation: fade-in 1s ease-in-out;
+}
+
+
+.HomeIcon {
+
   position: relative;
-  animation: mover 10s infinite;
   align-content: center;
   background-image: url("./assets/image/Home.png");
   background-size: cover;
+  margin-right: 10vh;
 
-  color: #b75858fc;
+  color: #dcccccfc;
   font-size: 2rem;
 }
+.HomeIcon:hover {
+   box-shadow: 0 0 5px rgba(229, 244, 65, 0.3);
 
-/* BurgerButton*/
+}
 
-.footer {
-  font-size: 2.5vw;
-    width: 100vw;
-    height: 20vh;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-size: 30vw;
-    padding: 1em 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Update Formulary*/
+
+.content {
+  
+  width: 250px; 
+  height: 340px;
+  margin: 10vh 0;
+  padding: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+}
+
+.Form {
+  display: flex;
+  flex-direction: column; 
+  align-content: center;
+}
+
+label {
+  margin-bottom: 10px; 
+}
+
+input,
+select {
+  padding: 10px; 
+  margin-bottom: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  font-size: 16px; 
+}
+button.btn {
+  padding: 8px 1px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+button.btn:hover {
+  background-color: #0056b3;
+}
 
 
-a{
-  margin-top: 4vh;
-  width: 80vw;
-  height: 10vh;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-
- 
+button  {
+  border-radius:2rem;
+  width: 10rem;
+  height: 2rem;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+background: rgb(96,9,240);
+    background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+    border: none;
+    
+    color:rgb(216, 190, 216);
+    
+  }
+  button:before {
+    height: 0%;
+    width: 2px;
+  }
+  button:hover {
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  }
   
 
-}
-}
+footer {
+  width:100%;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  .icon {
+    img {
+
+      width: 40px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      box-shadow: #fff;
+    }
+    img:hover {
+      box-shadow: 0 0 5px rgba(229, 244, 65, 0.3);
+  }
+}}
+
+
