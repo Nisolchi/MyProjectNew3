@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import AboutMePage from './pages/AboutMePage';
 import WorkoutPage from './pages/WorkoutPage';
 import Navbar from './Component/Navbar';
+import Footer from './Component/FooterNch';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,10 +40,10 @@ useEffect(()=>{
           
           {/* Add a new route for workouts page */}
         </Routes>
+        <Footer/>
         
       
       
-      <h2></h2>
       
       </div>
       
