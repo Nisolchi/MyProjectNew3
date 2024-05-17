@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
+// good thing you are creating a 
 const initialWorkout={
     Body_Part:"Legs and Glutes",
     image:"",
@@ -38,7 +39,7 @@ const UpdatePage=({getWorkouts})=>{
         const{data,error}=  await supabase.from("workouts").update(updateData)
         .eq("id", workoutId);
         if(error){
-            console.log("Error Updating workout",error);
+            console.log("Error Updating workout",error); // good job on the error handling
             return;
         }else{
             // everything went OK

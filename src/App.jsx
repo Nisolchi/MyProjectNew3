@@ -17,6 +17,7 @@ function App() {
   ); 
 
   const getWorkouts = async () => {
+    // nice work on the async/await pattern. You've implemented it as it is in the documentation
     const { data, error } = await supabase.from("workouts").select();
     if (error) {
       console.log("there was an error", error);
@@ -32,6 +33,14 @@ function App() {
   return (
     <>
       <Navbar />
+      {/* 
+        The path of the Routes should be written in kebab-case (convention we use in class).
+        This allows us to differentiate between the path and the component name.
+        like this: <Route path="/about-me" element={<AboutMePage />} />
+        <Route path="/form" element={<FormPage />} />
+        <Route path="/workout" element={<WorkoutPage getWorkouts={getWorkouts} workouts={workouts} />} />
+        <Route path="/workout/:workoutId" element={<UpdatePage getWorkouts={getWorkouts} />} />
+      */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/AboutMePage" element={<AboutMePage />} />

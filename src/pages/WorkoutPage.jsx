@@ -7,12 +7,13 @@ function WorkoutPage({workouts, getWorkouts}) {
     
    
     const deleteWorkout =async(workoutId)=>{
+        // nice work on the async/await pattern. You've implemented it as it is in the lesson and adapted it to your needs
         const {error} = await (supabase)
         .from("workouts")
         .delete()
         .eq("id", workoutId)
         if(error){
-            console.log("na'guara",error)
+            console.log("na'guara",error) // remember to use English in your code
         } else {
             console.log("Workout deleted");
             getWorkouts();

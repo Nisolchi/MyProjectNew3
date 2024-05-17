@@ -1,6 +1,6 @@
 
 
-import InstaIcon from "../assets/image/instagram.png";
+import InstaIcon from "../assets/image/instagram.png"; // remember to name your variables in camelCase
 import twitterIcon from "../assets/image/twitterX.png";
 import githubIcon from "../assets/image/github-icon.png"
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-
+// format the document to make it more readable (shift+alt+f)
 function Navbar() {
     return (
 <div className="NavContainer">
