@@ -1,6 +1,5 @@
 import{useState} from "react";
 import supabase from "../Supabase/config";
-import { Link } from "react-router-dom";
 
 const initialWorkout={
     Body_Part:"Legs and Glutes",
