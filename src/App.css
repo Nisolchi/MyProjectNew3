@@ -284,4 +284,10 @@ footer {
   }
 }}
 
-
+/* 
+The overall styling can be improved.
+The page is not responsive and the layout is not consistent. The cards for each workout are not aligned displayed in a column when they can be wrapped.
+By just wrapping the cards, the layout will be more consistent and the page will be more responsive.
+You can also create multiple CSS files and import them on the different components.
+The code is not formatted. This makes it difficult to read and maintain.
+*/

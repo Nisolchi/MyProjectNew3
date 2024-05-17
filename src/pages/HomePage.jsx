@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-const HomePage=({workouts})=>{
+const HomePage=({workouts})=>{ // this variable is not being used, you can remove it
     return (
 
         <>

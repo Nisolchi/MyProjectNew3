@@ -1,6 +1,5 @@
-# React + Vite
-
-Fitness Routine App
+# Add here the title of your project
+ Fitness Routine App
 
 A simple web application for creating and sharing personalized exercise routines.
 
